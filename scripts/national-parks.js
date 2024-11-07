@@ -40,7 +40,7 @@ function buildTable(data, tableBody) {
 
 function populateDropdown(data, dropdown) {
   
-  // Create "All" option
+  
   const option = document.createElement("option");
   option.value = "All";
   option.textContent = "All";

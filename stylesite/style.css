@@ -19,7 +19,7 @@ body {
 }
 
 .navbar .logo h1 {
-  color: #32cd32; 
+  color: #32cd32;
 }
 
 .nav-links a {
@@ -119,8 +119,9 @@ body {
   color: #fff;
   padding: 30px 30px;
   margin-top: 30px;
-  position: sticky;
-  
+
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-links {
@@ -193,42 +194,35 @@ body {
 }
 select#locationDropdown,
 select#typeDropdown {
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-    color: #333;
-    width: 300px; 
-    height: 50px;
-    appearance: none; 
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: #333;
+  width: 300px;
+  height: 50px;
+  appearance: none;
 }
-
 
 select#locationDropdown::after,
 select#typeDropdown::after {
-    content: '▼';
-    position: absolute;
-    right: 10px;
-    pointer-events: none;
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
 }
-
 
 select#locationDropdown,
 select#typeDropdown {
-    display: inline-block;
-    margin-top: 10px;
+  display: inline-block;
+  margin-top: 10px;
 }
-
 
 #typeDropdown {
-    display: none;
+  display: none;
 }
-
-
-
-
 
 .main-container {
   margin-top: 3rem;
@@ -255,7 +249,6 @@ h2.text-center {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-
 
 .info-card {
   width: 18rem;
@@ -285,7 +278,6 @@ h2.text-center {
   color: #333;
 }
 
-
 .card-text {
   font-size: 0.9rem;
   color: #555;
@@ -293,5 +285,32 @@ h2.text-center {
   line-height: 1.4;
 }
 
+/* Dropdown Styling */
+select {
+  appearance: none; /* Removes default dropdown arrow */
+  -webkit-appearance: none; /* Safari compatibility */
+  -moz-appearance: none; /* Firefox compatibility */
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 8px 30px 8px 10px; /* Space for arrow on the right */
+  font-size: 14px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 500px;
+  color: #333;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2212%22 height%3D%2212%22 viewBox%3D%220 0 24 24%22 fill%3D%22%23000000%22%3E%3Cpath d%3D%22M7 10l5 5 5-5H7z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
 
+select:focus {
+  outline: none;
+  border-color: #666;
+}
 
+/* Optional: Specific styling for the "All" option if needed */
+select option[value="All"] {
+  font-weight: bold;
+}
