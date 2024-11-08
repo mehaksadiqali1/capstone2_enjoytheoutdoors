@@ -217,7 +217,7 @@ select#typeDropdown::after {
 }
 
 #mountainDetailsParagraph p {
-  margin: 2px; /* Sets a 5px margin */
+  margin: 2px; 
 }
 
 select#locationDropdown,
