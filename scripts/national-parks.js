@@ -7,7 +7,7 @@ const byLocationRadio = document.querySelector("#byLocationRadio");
 const byTypeRadio = document.querySelector("#byTypeRadio");
 
 function buildTable(data, tableBody) {
-  tableBody.innerHTML = "";
+  tableBody.innerText = "";
 
   data.forEach((nationalPark) => {
     let tr = tableBody.insertRow();
@@ -34,7 +34,15 @@ function buildTable(data, tableBody) {
     td7.innerText = nationalPark.Phone || "N/A";
 
     let td8 = tr.insertCell();
-    td8.innerText = nationalPark.Website || "N/A";
+    if (nationalPark.Visit) {
+      let link = document.createElement("a");
+      link.href = nationalPark.Visit
+      link.target = "_blank"; 
+      link.innerText = "Visit Site";
+      td8.appendChild(link);
+    } else {
+      td8.innerText = "N/A";
+    }
   });
 }
 
